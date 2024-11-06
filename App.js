@@ -87,6 +87,7 @@ function CheckCheckbox(id) {
         let element = document.getElementById(`Routine-${id}`);
         if (element) {
             element.classList.add("text-decoration-line-through")
+            RenderBadge(Routine, 'Routine')
         }
     }
 
@@ -104,11 +105,9 @@ function CheckCheckbox(id) {
         let element = document.getElementById(`Routine-${id}`);
         if (element) {
             element.classList.remove("text-decoration-line-through")
+            RenderBadge(Routine, 'Routine')
         }
     }
-
-    
-
 }
 
 
@@ -139,6 +138,7 @@ function Add() {
 
     if (OptionCategoryEL.value === "Routine") {
         RenderList(InputAddInputEL, OptionCategoryEL, Routine, RoutineAccordionListEL)
+        RenderBadge(Routine, 'Routine')
     }
 }
 
@@ -169,6 +169,7 @@ function Remove(id) {
 
         if (RemoveElement) {
             RemoveElement.remove()
+            RenderBadge(Routine, 'Routine')
         }
     }
 }
@@ -182,4 +183,4 @@ function Remove(id) {
 //     localStorage.setItem("routine", JSON.stringify(Routine));
 //     localStorage.clear()
 // }
-RenderBadge(Routine, 'Routine')
+// RenderBadge(Routine, 'Routine')
