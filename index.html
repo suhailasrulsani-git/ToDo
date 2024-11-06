@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="Alert">
+      <!-- <div class="alert alert-danger" role="alert">
+        A simple primary alert—check it out!
+      </div> -->
+    </div>
+
+    <div>
+      <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary">Suhail MyTo Apps</button>
+      </div>
+
+      <div class="form-floating mb-3 mt-3 ms-2 me-2">
+        <input
+          id="InputAddInputEL"
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">add input here..</label>
+      </div>
+    </div>
+
+    <div class="mb-3 ms-2 me-2">
+      <select
+        id="OptionCategoryEL"
+        class="form-select"
+        id="floatingSelect"
+        aria-label="Floating label select example"
+      >
+        <option selected>Category</option>
+        <option value="Routine">Routine</option>
+        <option value="Ibadah">Ibadah</option>
+        <option value="NonRoutine">NonRoutine</option>
+        <option value="ToBuy">ToBuy</option>
+      </select>
+    </div>
+
+    <div class="d-grid gap-2">
+      <button type="button" onclick="Add()" class="btn btn-info">Add</button>
+    </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 id="Routineheader" class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Routine
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div id="Routine-AccordionListEL" class="accordion-body">
+            <li class="list-group-item ms-0 p-0 d-flex justify-content-between text-decoration-line-through">
+              An item
+
+              <div>
+                <input
+                  class="form-check-input me-3"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                /><button
+                  type="button"
+                  class="btn-close"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Ibadah
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <li class="list-group-item ms-0 p-0 d-flex justify-content-between">
+              An item
+
+              <div>
+                <input
+                  class="form-check-input me-3"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                /><button
+                  type="button"
+                  class="btn-close"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            NonRoutine
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <li class="list-group-item ms-0 p-0 d-flex justify-content-between">
+              An item
+
+              <div>
+                <input
+                  class="form-check-input me-3"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                /><button
+                  type="button"
+                  class="btn-close"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            ToBuy
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <li class="list-group-item ms-0 p-0 d-flex justify-content-between">
+              An item
+
+              <div>
+                <input
+                  class="form-check-input me-3"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                /><button
+                  type="button"
+                  class="btn-close"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 mt-5">
+      <button onclick="Reset()" type="button" class="btn btn-warning">Reset</button>
+    </div>
+
+    <script src="App.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
