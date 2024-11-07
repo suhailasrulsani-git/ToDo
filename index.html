@@ -42,7 +42,7 @@
         id="floatingSelect"
         aria-label="Floating label select example"
       >
-        <option selected>Category</option>
+        <option id="OptionCategoryEL" selected>Category</option>
         <option value="Routine">Routine</option>
         <option value="Ibadah">Ibadah</option>
         <option value="NonRoutine">NonRoutine</option>
@@ -66,6 +66,9 @@
             aria-controls="flush-collapseOne"
           >
             Routine
+            <div id="RoutineBadgeEL">
+              <span class="badge rounded-pill text-bg-primary ms-2"> 0 </span>
+            </div>
           </button>
         </h2>
         <div
@@ -73,16 +76,18 @@
           class="accordion-collapse collapse"
           data-bs-parent="#accordionFlushExample"
         >
-          <div id="Routine-AccordionListEL" class="accordion-body">
-            <li class="list-group-item ms-0 p-0 d-flex justify-content-between text-decoration-line-through">
+          <div id="RoutineAccordionListEL" class="accordion-body">
+            <li
+              class="list-group-item ms-0 p-0 d-flex justify-content-between text-decoration-line-through"
+            >
               An item
 
               <div>
                 <input
+                  id="flexCheckDefault"
                   class="form-check-input me-3"
                   type="checkbox"
                   value=""
-                  id="flexCheckDefault"
                 /><button
                   type="button"
                   class="btn-close"
@@ -94,7 +99,7 @@
         </div>
       </div>
       <div class="accordion-item">
-        <h2 class="accordion-header">
+        <h2 id="Ibadahheader" class="accordion-header">
           <button
             class="accordion-button collapsed"
             type="button"
@@ -104,6 +109,9 @@
             aria-controls="flush-collapseTwo"
           >
             Ibadah
+            <div id="IbadahBadgeEL">
+              <span class="badge rounded-pill text-bg-primary ms-2"> 0 </span>
+            </div>
           </button>
         </h2>
         <div
@@ -111,7 +119,7 @@
           class="accordion-collapse collapse"
           data-bs-parent="#accordionFlushExample"
         >
-          <div class="accordion-body">
+          <div id="IbadahAccordionListEL" class="accordion-body">
             <li class="list-group-item ms-0 p-0 d-flex justify-content-between">
               An item
 
@@ -142,6 +150,9 @@
             aria-controls="flush-collapseThree"
           >
             NonRoutine
+            <div id="NonRoutineBadgeEL">
+              <span class="badge rounded-pill text-bg-primary ms-2"> 0 </span>
+            </div>
           </button>
         </h2>
         <div
@@ -149,7 +160,7 @@
           class="accordion-collapse collapse"
           data-bs-parent="#accordionFlushExample"
         >
-          <div class="accordion-body">
+          <div id="NonRoutineAccordionListEL" class="accordion-body">
             <li class="list-group-item ms-0 p-0 d-flex justify-content-between">
               An item
 
@@ -180,6 +191,9 @@
             aria-controls="flush-collapseFour"
           >
             ToBuy
+            <div id="ToBuyBadgeEL">
+              <span class="badge rounded-pill text-bg-primary ms-2"> 0 </span>
+            </div>
           </button>
         </h2>
         <div
@@ -187,7 +201,7 @@
           class="accordion-collapse collapse"
           data-bs-parent="#accordionFlushExample"
         >
-          <div class="accordion-body">
+          <div id="ToBuyAccordionListEL" class="accordion-body">
             <li class="list-group-item ms-0 p-0 d-flex justify-content-between">
               An item
 
@@ -210,7 +224,9 @@
     </div>
 
     <div class="d-grid gap-2 mt-5">
-      <button onclick="Reset()" type="button" class="btn btn-warning">Reset</button>
+      <button onclick="Reset()" type="button" class="btn btn-warning">
+        Reset
+      </button>
     </div>
 
     <script src="App.js"></script>
